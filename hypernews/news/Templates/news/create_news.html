@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+<head>
+    <meta charset="utf-8" />
+    <title>Hyper News</title>
+</head>
+<body>
+    <form action="/news/create/" method="post">
+        {% csrf_token %}
+        <label for="title">Title</label>
+        <input name="title">
+        <br />
+        <label for="text">Text</label>
+        <input id ="text"name="text">
+        <br />
+        <button type="submit">Add your news</button>
+    </form>
+
+    <a target="_blank" href="/news/">Main menu</a>
+</body>
+</html>
